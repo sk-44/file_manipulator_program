@@ -1,0 +1,9 @@
+services:
+  file-mp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    volumes:
+      - ./:/file_mp
+    # entrypoint: ["/bin/sh", "-c", "cd /file_mp && exec /bin/sh"]
